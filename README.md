@@ -1,6 +1,6 @@
 # AP-SysLogWriter
 
-A thin-wrapper facade for writing logs to the Windows event log.
+A thin-wrapper facade for writing logs to the Windows event log (https://github.com/adampresley/AP-SysLogWriter).
 
 ## Example
 ```csharp
