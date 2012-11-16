@@ -2,6 +2,30 @@
 
 A thin-wrapper facade for writing logs to the Windows event log.
 
+## Example
+```csharp
+using System;
+using System.Diagnostics;
+using AP_SysLogWriter;
+
+namespace TestSysLogWriter {
+	
+	class Program {
+		static void Main(string[] args) {
+			EventLogWriter log = new EventLogWriter("MyTestProgram");
+
+			// Do stuff here, then log about it
+			try {
+				log.write("We did stuff", EventLogEntryType.Information);
+			} catch (Exception e) {
+				log.write("Oops!", EventLogEntryType.Error);
+			}
+		}
+	}
+
+}
+```
+
 ## License
 Copyright (c) 2012, Adam Presley
 All rights reserved.
